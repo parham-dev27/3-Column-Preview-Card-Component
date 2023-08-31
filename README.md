@@ -1,6 +1,6 @@
 <img src="./screenshots/desktop-view.png"></img>
 
-<h1 align="center">#Project Name</h1>
+<h1 align="center">3-Column-Preview-Card-Component</h1>
 
 <div align="center">
   <h3>
