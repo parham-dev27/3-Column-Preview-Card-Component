@@ -1,0 +1,11 @@
+@mixin font-lexend {
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+}
+
+@mixin font-shoulders {
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 700;
+}
+
+$font-size: 15px;

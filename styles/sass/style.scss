@@ -1,0 +1,78 @@
+@forward "./util/reset";
+@use "./variables" as var;
+
+body {
+    @include var.font-lexend;
+    font-size: var.$font-size;
+    background-color: var.$very-light-gray;
+    display: grid;
+    place-content: center;
+}
+
+main {
+    margin: 30px;
+    display: grid;
+    grid-template-areas:
+        "a"
+        "b"
+        "c";
+    border-radius: 8px;
+    overflow: hidden;
+    @media (min-width: 678px) {
+        grid-template-areas: "a b c";
+    }
+}
+
+.card {
+    color: var.$very-light-gray;
+    max-width: 300px;
+    padding: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+    align-items: flex-start;
+    &__title {
+        @include var.font-shoulders;
+        font-size: 2.5em;
+        text-transform: uppercase;
+    }
+    &__description {
+        color: var.$transparent-white;
+    }
+
+    &__button {
+        transition: all 0.3s ease-in-out;
+        transition-property: background-color, color;
+        border: 2px solid var.$very-light-gray;
+        padding: 14px 28px;
+        border-radius: 1000rem;
+        background-color: var.$very-light-gray;
+        &:hover,
+        &:focus-within {
+            background-color: transparent;
+            color: var.$very-light-gray !important;
+        }
+    }
+
+    &:nth-child(1) {
+        background-color: var.$bright-orange;
+        grid-area: "a";
+        .card__button {
+            color: var.$bright-orange;
+        }
+    }
+    &:nth-child(2) {
+        background-color: var.$dark-cyan;
+        grid-area: "b";
+        .card__button {
+            color: var.$dark-cyan;
+        }
+    }
+    &:nth-child(3) {
+        background-color: var.$very-dark-cyan;
+        grid-area: "c";
+        .card__button {
+            color: var.$very-dark-cyan;
+        }
+    }
+}

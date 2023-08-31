@@ -1,0 +1,98 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+button {
+  all: unset;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 95%);
+  display: grid;
+  place-content: center;
+}
+
+main {
+  margin: 30px;
+  display: grid;
+  grid-template-areas: "a" "b" "c";
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 678px) {
+  main {
+    grid-template-areas: "a b c";
+  }
+}
+
+.card {
+  color: hsl(0, 0%, 95%);
+  max-width: 300px;
+  padding: 3rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+.card__title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+.card__description {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.card__button {
+  transition: all 0.3s ease-in-out;
+  transition-property: background-color, color;
+  border: 2px solid hsl(0, 0%, 95%);
+  padding: 14px 28px;
+  border-radius: 1000rem;
+  background-color: hsl(0, 0%, 95%);
+}
+.card__button:hover, .card__button:focus-within {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%) !important;
+}
+.card:nth-child(1) {
+  background-color: hsl(31, 77%, 52%);
+  grid-area: "a";
+}
+.card:nth-child(1) .card__button {
+  color: hsl(31, 77%, 52%);
+}
+.card:nth-child(2) {
+  background-color: hsl(184, 100%, 22%);
+  grid-area: "b";
+}
+.card:nth-child(2) .card__button {
+  color: hsl(184, 100%, 22%);
+}
+.card:nth-child(3) {
+  background-color: hsl(179, 100%, 13%);
+  grid-area: "c";
+}
+.card:nth-child(3) .card__button {
+  color: hsl(179, 100%, 13%);
+}
+
+/*# sourceMappingURL=style.css.map */
